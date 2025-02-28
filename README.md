@@ -10,6 +10,13 @@ Implementation of a `Hardware Interface` for simple Ethercat module integration 
 
 **For more information, please check the [documentation](https://ICube-Robotics.github.io/ethercat_driver_ros2/).**
 
+# Build
+Clone this repo as a package inside a ros2 workspace, like `git clone this_repo_url ~/ros2_ws/src`.
+Using the below command to build the entire workspace and choose the etherlab location as you would like to:
+```sh
+colcon build --symlink-install --cmake-args ' -DCMAKE_BUILD_TYPE=Release' ' -DETHERLAB_DIR=/opt/etherlab'
+```
+
 ## Acknowledgments
 Parts of the driver are based on the implementation of [`SimplECAT`](https://bitbucket.org/bsoe/simplecat/src/master/).
 
